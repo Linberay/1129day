@@ -1,6 +1,6 @@
 package cn.edu.guet.main;
 
-import java.sql.PreparedStatement;
+import java.sql.*;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -18,6 +18,7 @@ public class Main {
         Connection conn = null;// 表示数据库的连接对象
         PreparedStatement pstmt = null;// 表示SQL语句的对象
         ResultSet rs = null;
+        //加了注释
         try {
             conn = DriverManager.getConnection(url, "root", "123456");
             pstmt = conn.prepareStatement(sql);// 把pstmt和sql语句做一个关联，pstmt就代表上面的sql语句
